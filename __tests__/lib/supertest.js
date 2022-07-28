@@ -1,4 +1,4 @@
-const supertest = require('supertest'); /* eslint-disable-line import/no-extraneous-dependencies */
+const supertest = require('supertest');
 const status = require('statuses'); /* eslint-disable-line import/no-extraneous-dependencies */
 const log = require('loglevel');
 

@@ -5,7 +5,7 @@ const log = require('loglevel');
 const HttpError = require('./utils/HttpError');
 const { errorHandler } = require('./utils/utils');
 const { handlerWrapper } = require('./utils/utils');
-const router = require('./routes');
+// const router = require('./routes');
 
 const app = express();
 
@@ -39,12 +39,12 @@ app.use(express.urlencoded({ extended: false })); // parse application/x-www-for
 app.use(express.json()); // parse application/json
 
 // routers
-app.use('/', router);
+// app.use('/', router);
 
 // Global error handler
 app.use(errorHandler);
 
-const {version} = require('../package.json');
+const { version } = require('../package.json');
 
 app.get('*', function (req, res) {
   res.status(200).send(version);
