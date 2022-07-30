@@ -1,2 +1,1 @@
-DROP INDEX idx_organization_common_name;
 DROP TABLE organization_species;

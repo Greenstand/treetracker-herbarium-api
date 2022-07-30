@@ -1,4 +1,4 @@
-CREATE TABLE reference_images
+CREATE TABLE reference_image
 (
     id uuid NOT NULL PRIMARY KEY DEFAULT uuid_generate_v4(),
     species_id uuid NOT NULL REFERENCES species(id),

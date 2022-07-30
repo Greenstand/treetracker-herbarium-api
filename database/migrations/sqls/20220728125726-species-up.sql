@@ -10,3 +10,6 @@ CREATE TABLE species
     created_at timestamptz NOT NULL DEFAULT now(),
     updated_at timestamptz NOT NULL DEFAULT now()
 );
+
+CREATE UNIQUE INDEX idx_scientific_name
+   ON species (lower(scientific_name));
