@@ -34,7 +34,7 @@ const organizationSpeciesHandlerGet = async (req, res) => {
   });
 
   res.send({
-    organizationSpecies,
+    organization_species: organizationSpecies,
     links,
     count,
     query: { ...limitOptions, ...filter },

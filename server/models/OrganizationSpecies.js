@@ -28,6 +28,7 @@ class OrganizationSpecies {
     return this._organizationSpeciesRepository.update({
       id: organizationSpeciesId,
       active: false,
+      updated_at: new Date().toISOString(),
     });
   }
 

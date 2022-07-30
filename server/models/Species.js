@@ -29,7 +29,10 @@ class Species {
   }
 
   async updateSpecies(requestObject) {
-    return this._speciesRepository.update(requestObject);
+    return this._speciesRepository.update({
+      ...requestObject,
+      updated_at: new Date().toISOString(),
+    });
   }
 }
 
