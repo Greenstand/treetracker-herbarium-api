@@ -34,6 +34,10 @@ class Species {
       updated_at: new Date().toISOString(),
     });
   }
+
+  async getSpeciesById(speciesId) {
+    return this._speciesRepository.getById(speciesId);
+  }
 }
 
 module.exports = Species;

@@ -26,11 +26,7 @@ class ReferenceImage {
   }
 
   async getReferenceImageById(referenceImageId) {
-    const referenceImage = await this.getReferenceImages({
-      id: referenceImageId,
-    });
-
-    return referenceImage[0];
+    return this._referenceImageRepository.getById(referenceImageId);
   }
 
   async createReferenceImage(requestObject) {

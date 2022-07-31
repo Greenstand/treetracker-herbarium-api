@@ -1,25 +1,25 @@
 const Session = require('../infra/database/Session');
-const Species = require('../models/Species');
+const CommonName = require('../models/CommonName');
 
-class SpeciesService {
+class CommonNameService {
   constructor() {
     this._session = new Session();
-    this._species = new Species(this._session);
+    this._commonName = new CommonName(this._session);
   }
 
-  async getSpecies(filter, limitOptions) {
-    return this._species.getSpecies(filter, limitOptions);
+  async getCommonNames(filter, limitOptions) {
+    return this._commonName.getCommonNames(filter, limitOptions);
   }
 
-  async getSpeciesById(speciesId) {
-    return this._species.getSpeciesById(speciesId);
+  async getCommonNameById(commonNameId) {
+    return this._commonName.getCommonNameById(commonNameId);
   }
 
-  async createSpecies(requestObject) {
+  async deleteCommonName(commonNameId) {
     try {
       await this._session.beginTransaction();
 
-      const result = await this._species.createSpecies(requestObject);
+      const result = await this._commonName.deleteCommonName(commonNameId);
 
       await this._session.commitTransaction();
       return result;
@@ -31,11 +31,14 @@ class SpeciesService {
     }
   }
 
-  async updateSpecies(requestObject) {
+  async createCommonName(requestObject) {
     try {
       await this._session.beginTransaction();
 
-      const result = await this._species.updateSpecies(requestObject);
+      const result = await this._commonName.createCommonName(
+        requestObject,
+        true,
+      );
 
       await this._session.commitTransaction();
       return result;
@@ -48,4 +51,4 @@ class SpeciesService {
   }
 }
 
-module.exports = SpeciesService;
+module.exports = CommonNameService;
