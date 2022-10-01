@@ -1,0 +1,1158 @@
+{
+	"info": {
+		"_postman_id": "22af64dc-32c4-4056-8b04-ebeba69befd5",
+		"name": "treetracker herbarium api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8545971"
+	},
+	"item": [
+		{
+			"name": "common name",
+			"item": [
+				{
+					"name": "/common_name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/common_name?limit=1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"common_name"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/common_name",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "javascript"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/common_name",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"common_name"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "species",
+			"item": [
+				{
+					"name": "/species",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/species?limit=1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"species"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/species",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/species?limit=1",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"species"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "343"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"157-3Nyq9WlMckIovpnB7wu2nXmNFqA\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 Oct 2022 03:38:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"species\": [\n        {\n            \"id\": \"60af39c5-8d20-4e41-8195-12a74a148f84\",\n            \"scientific_name\": \"lorem ipsum\",\n            \"description\": \"sed do eiusmod tempor incididunt ut labore\",\n            \"morphology\": \"voluptate\",\n            \"range\": null,\n            \"created_at\": \"2022-10-01T03:37:03.702Z\",\n            \"updated_at\": \"2022-10-01T03:37:03.702Z\"\n        }\n    ],\n    \"links\": {\n        \"next\": null,\n        \"prev\": null\n    },\n    \"count\": 1,\n    \"query\": {\n        \"limit\": 1,\n        \"offset\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "/species",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"scientific_name\": \"Lorem ipsum\",\n    \"description\": \"sed do eiusmod tempor incididunt ut labore\",\n    \"morphology\": \"voluptate\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/species",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"species"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/species",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"scientific_name\": \"Lorem ipsum\",\n    \"description\": \"sed do eiusmod tempor incididunt ut labore\",\n    \"morphology\": \"voluptate\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/species",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"species"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "254"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"fe-ZXzFCOTcLjpeoX+zVxlQSJ3aFrc\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 Oct 2022 03:37:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"60af39c5-8d20-4e41-8195-12a74a148f84\",\n    \"scientific_name\": \"lorem ipsum\",\n    \"description\": \"sed do eiusmod tempor incididunt ut labore\",\n    \"morphology\": \"voluptate\",\n    \"range\": null,\n    \"created_at\": \"2022-10-01T03:37:03.702Z\",\n    \"updated_at\": \"2022-10-01T03:37:03.702Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "/species/:species_id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/species/60af39c5-8d20-4e41-8195-12a74a148f84",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"species",
+								"60af39c5-8d20-4e41-8195-12a74a148f84"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/species/:species_id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/species/60af39c5-8d20-4e41-8195-12a74a148f84",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"species",
+										"60af39c5-8d20-4e41-8195-12a74a148f84"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "254"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"fe-ZXzFCOTcLjpeoX+zVxlQSJ3aFrc\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 Oct 2022 03:40:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"60af39c5-8d20-4e41-8195-12a74a148f84\",\n    \"scientific_name\": \"lorem ipsum\",\n    \"description\": \"sed do eiusmod tempor incididunt ut labore\",\n    \"morphology\": \"voluptate\",\n    \"range\": null,\n    \"created_at\": \"2022-10-01T03:37:03.702Z\",\n    \"updated_at\": \"2022-10-01T03:37:03.702Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "/species/:species_id",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"sed do eiusmod tempor incididunt ut labore\",\n    \"morphology\": \"voluptate\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/species/60af39c5-8d20-4e41-8195-12a74a148f84",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"species",
+								"60af39c5-8d20-4e41-8195-12a74a148f84"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/species/:species_id",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"description\": \"sed do eiusmod tempor incididunt ut labore\",\n    \"morphology\": \"voluptate\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/species/60af39c5-8d20-4e41-8195-12a74a148f84",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"species",
+										"60af39c5-8d20-4e41-8195-12a74a148f84"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "254"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"fe-O5dW8YS5zZDLZFaegTgHwOB6ZqU\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 Oct 2022 03:44:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"60af39c5-8d20-4e41-8195-12a74a148f84\",\n    \"scientific_name\": \"lorem ipsum\",\n    \"description\": \"sed do eiusmod tempor incididunt ut labore\",\n    \"morphology\": \"voluptate\",\n    \"range\": null,\n    \"created_at\": \"2022-10-01T03:37:03.702Z\",\n    \"updated_at\": \"2022-10-01T03:44:30.811Z\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "reference image",
+			"item": [
+				{
+					"name": "/reference_image",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"species_id\": \"60af39c5-8d20-4e41-8195-12a74a148f84\",\n    \"url\": \"https://via.placeholder.com/500\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/reference_image",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"reference_image"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/reference_image",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"species_id\": \"60af39c5-8d20-4e41-8195-12a74a148f84\",\n    \"url\": \"https://via.placeholder.com/500\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/reference_image",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"reference_image"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "231"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e7-MkIRn2O6x3Sxx3nqenQxYy5aZw0\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 Oct 2022 03:52:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"fa956f43-3cf6-41e9-b738-02a2751d66d6\",\n    \"species_id\": \"60af39c5-8d20-4e41-8195-12a74a148f84\",\n    \"url\": \"https://via.placeholder.com/500\",\n    \"created_at\": \"2022-10-01T03:52:10.330Z\",\n    \"updated_at\": \"2022-10-01T03:52:10.330Z\",\n    \"active\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "/reference_image",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/reference_image?limit=1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"reference_image"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/reference_image",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/reference_image?limit=1",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"reference_image"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "329"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"149-gvGmzAmvTYIUgJz3WGiNsWcW1sE\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 Oct 2022 03:54:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"reference_images\": [\n        {\n            \"id\": \"fa956f43-3cf6-41e9-b738-02a2751d66d6\",\n            \"species_id\": \"60af39c5-8d20-4e41-8195-12a74a148f84\",\n            \"url\": \"https://via.placeholder.com/500\",\n            \"created_at\": \"2022-10-01T03:52:10.330Z\",\n            \"updated_at\": \"2022-10-01T03:52:10.330Z\",\n            \"active\": true\n        }\n    ],\n    \"links\": {\n        \"next\": null,\n        \"prev\": null\n    },\n    \"count\": 1,\n    \"query\": {\n        \"limit\": 1,\n        \"offset\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "/reference_image/:reference_image_id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/reference_image/fa956f43-3cf6-41e9-b738-02a2751d66d6",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"reference_image",
+								"fa956f43-3cf6-41e9-b738-02a2751d66d6"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/reference_image/:reference_image_id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/reference_image/fa956f43-3cf6-41e9-b738-02a2751d66d6",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"reference_image",
+										"fa956f43-3cf6-41e9-b738-02a2751d66d6"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "231"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e7-MkIRn2O6x3Sxx3nqenQxYy5aZw0\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 Oct 2022 03:56:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"fa956f43-3cf6-41e9-b738-02a2751d66d6\",\n    \"species_id\": \"60af39c5-8d20-4e41-8195-12a74a148f84\",\n    \"url\": \"https://via.placeholder.com/500\",\n    \"created_at\": \"2022-10-01T03:52:10.330Z\",\n    \"updated_at\": \"2022-10-01T03:52:10.330Z\",\n    \"active\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "/reference_image/:reference_image_id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/reference_image/fa956f43-3cf6-41e9-b738-02a2751d66d6",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"reference_image",
+								"fa956f43-3cf6-41e9-b738-02a2751d66d6"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/reference_image/:reference_image_id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/reference_image/fa956f43-3cf6-41e9-b738-02a2751d66d6",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"reference_image",
+										"fa956f43-3cf6-41e9-b738-02a2751d66d6"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "231"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e7-MkIRn2O6x3Sxx3nqenQxYy5aZw0\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 Oct 2022 03:56:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"fa956f43-3cf6-41e9-b738-02a2751d66d6\",\n    \"species_id\": \"60af39c5-8d20-4e41-8195-12a74a148f84\",\n    \"url\": \"https://via.placeholder.com/500\",\n    \"created_at\": \"2022-10-01T03:52:10.330Z\",\n    \"updated_at\": \"2022-10-01T03:52:10.330Z\",\n    \"active\": true\n}"
+						},
+						{
+							"name": "/reference_image/:reference_image_id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/reference_image/fa956f43-3cf6-41e9-b738-02a2751d66d6",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"reference_image",
+										"fa956f43-3cf6-41e9-b738-02a2751d66d6"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "232"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e8-LI1mTipikgz6u1e5yahMd8PfbB0\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 Oct 2022 18:05:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"fa956f43-3cf6-41e9-b738-02a2751d66d6\",\n    \"species_id\": \"60af39c5-8d20-4e41-8195-12a74a148f84\",\n    \"url\": \"https://via.placeholder.com/500\",\n    \"created_at\": \"2022-10-01T03:52:10.330Z\",\n    \"updated_at\": \"2022-10-01T18:05:47.701Z\",\n    \"active\": false\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "organization species",
+			"item": [
+				{
+					"name": "/organization_species",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"common_name\": \"Lorem ipsum\",\n    \"species_id\": \"60af39c5-8d20-4e41-8195-12a74a148f84\",\n    \"organization_id\": \"edc9e3c0-a2d9-4533-be55-bbb993582699\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/organization_species",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"organization_species"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/organization_species",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"common_name\": \"Lorem ipsum\",\n    \"species_id\": \"60af39c5-8d20-4e41-8195-12a74a148f84\",\n    \"organization_id\": \"edc9e3c0-a2d9-4533-be55-bbb993582699\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/organization_species",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"organization_species"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "270"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"10e-iGEUMV3Gq/IuMCayPs4geBzwywM\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 Oct 2022 18:12:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"f868c7d0-34cd-40e5-a021-b414565d62b0\",\n    \"common_name_id\": \"80824247-bb71-472b-b460-742d99f0a018\",\n    \"organization_id\": \"edc9e3c0-a2d9-4533-be55-bbb993582699\",\n    \"created_at\": \"2022-10-01T18:12:39.932Z\",\n    \"updated_at\": \"2022-10-01T18:12:39.932Z\",\n    \"created_by\": null,\n    \"active\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "/organization_species",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/organization_species?limit=1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"organization_species"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/organization_species",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/organization_species?limit=1",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"organization_species"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "325"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"145-yu1loTJDGxmSZQutoOn5QfjYHtU\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 Oct 2022 18:14:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"organization_species\": [\n        {\n            \"id\": \"f868c7d0-34cd-40e5-a021-b414565d62b0\",\n            \"common_name\": \"lorem ipsum\",\n            \"species_id\": \"60af39c5-8d20-4e41-8195-12a74a148f84\",\n            \"created_at\": \"2022-10-01T18:12:39.932Z\",\n            \"updated_at\": \"2022-10-01T18:12:39.932Z\",\n            \"created_by\": null\n        }\n    ],\n    \"links\": {\n        \"next\": null,\n        \"prev\": null\n    },\n    \"count\": 1,\n    \"query\": {\n        \"limit\": 1,\n        \"offset\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "/organization_species/:organization_species_id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/organization_species/f868c7d0-34cd-40e5-a021-b414565d62b0",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"organization_species",
+								"f868c7d0-34cd-40e5-a021-b414565d62b0"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/organization_species/:organization_species_id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/organization_species/f868c7d0-34cd-40e5-a021-b414565d62b0",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"organization_species",
+										"f868c7d0-34cd-40e5-a021-b414565d62b0"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "223"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"df-eAtkjXZHNrvolBH1ljAr9AGeYVU\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 Oct 2022 18:17:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"f868c7d0-34cd-40e5-a021-b414565d62b0\",\n    \"common_name\": \"lorem ipsum\",\n    \"species_id\": \"60af39c5-8d20-4e41-8195-12a74a148f84\",\n    \"created_at\": \"2022-10-01T18:12:39.932Z\",\n    \"updated_at\": \"2022-10-01T18:12:39.932Z\",\n    \"created_by\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "/organization_species/:organization_species_id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/organization_species/f868c7d0-34cd-40e5-a021-b414565d62b0",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"organization_species",
+								"f868c7d0-34cd-40e5-a021-b414565d62b0"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/organization_species/:organization_species_id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/organization_species/f868c7d0-34cd-40e5-a021-b414565d62b0",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"organization_species",
+										"f868c7d0-34cd-40e5-a021-b414565d62b0"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "23"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"17-gcHXqUtxUZwLcAgWkTWeF5bBIB8\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 Oct 2022 18:18:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"successful\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "localhost",
+			"type": "string"
+		}
+	]
+}
