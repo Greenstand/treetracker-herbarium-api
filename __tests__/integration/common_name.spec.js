@@ -58,10 +58,14 @@ describe('common_name', () => {
 
     describe('GET', () => {
 
+        let commonNameId = null;
+
         before(async () => {
-            await knex('common_name').insert({
+            const res = await knex('common_name').insert({
                 ...common_name2
-            })
+            }).returning('id');
+
+            commonNameId = [res];
         });
 
         it('should get common name', async () => {
@@ -72,6 +76,13 @@ describe('common_name', () => {
                 .that.contains.something.like({
                     ...common_name1
             });
+        });
+
+        it('should delete a common name', async () => {
+            await request(app)
+                .delete(`/common_name/${commonNameId}`)
+                .set('Accept', 'application/json')
+                .expect(200);
         });
     });
 });
