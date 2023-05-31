@@ -1,0 +1,1 @@
+ALTER TABLE species ALTER COLUMN morphology SET NOT NULL;
