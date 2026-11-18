@@ -1,6 +1,6 @@
 # Realm and project species selections
 
-A realm is assumed to be the organization scope shared by its members, identified by the same UUID used by `herbarium.organization_species.organization_id`. Project IDs are opaque text until the project service's identity contract is confirmed. The API must resolve the project under the authenticated organization before reading or writing a project selection.
+A realm is assumed to be the organization scope shared by its members, identified by the same UUID used by `herbarium.organization_species.organization_id`. Project IDs are UUIDs assigned by the proposed Stakeholder project service. The API must resolve the project under the authenticated organization before reading or writing a project selection.
 
 `herbarium.species_selection` references the Herbarium catalog UUID. A null `project_id` makes the row part of the organization-wide selection. An optional `local_name` applies only to that row. It does not change the canonical scientific name or the existing common-name records. A species can appear once in each scope.
 
